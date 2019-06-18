@@ -1,0 +1,282 @@
+/* thanh hien thi quy trinh mua hang */
+#titleCart {
+	position: relative;
+	text-align: center;
+	padding: 13px 0;
+}
+
+#titleCart > div {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	text-align: center;
+	width: 300px;
+}
+
+#titleCart > div > i {
+	width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 23px;
+    box-shadow: 0 0 0 3px #fff;
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0 auto 10px;
+    background: #ccc;
+    color: #fff;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+}
+
+#bdTCart {
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	border-top: 1px solid #000;
+	top: 26px;
+	left: 0px;
+}
+/* kich thuoc anh hien thi cho san pham */
+.img-size {
+    height: 400px;
+  }
+/* hover vào 1 sp bat ki */
+  .card:hover {
+    /* border: 1px solid red; */
+    transform: scale(1.05);
+    z-index: 999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+/* chinh sach mua hang của trang thong tin chi tiet */
+  .display-prd {
+    width: 17%;
+  }
+
+  .tablink {
+    background-color: white;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    border-bottom: 1px solid white;
+  }
+
+
+
+  /* Style the tab content */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 30px;
+
+  }
+
+  #ChinhSachDoiTra {
+    background-color: white;
+  }
+
+  #ThongTinVanChuyen {
+    background-color: white;
+  }
+
+  #ThongTinThanhToan {
+    background-color: white;
+  }
+
+
+/* box chua thong tin san pham và cac tieu chi lua chon san pham */
+  .box-title {
+    color: #851d1d;
+    border: 1px solid #6d2929;
+    padding: 10px;
+    text-align: center;
+    background-color: #d0c5c5;
+  }
+
+  .box-body {
+    border-left: 1px solid #6d2929;
+    border-bottom: 1px solid #6d2929;
+    border-right: 1px solid #6d2929;
+    padding: 10px;
+  }
+
+/* anh hien thi san pham tren trang thong tin chi tiet */
+  .imgProduct {
+    height: 500px;
+    width: 335px;
+    border: 2px solid #a74949;
+
+  }
+
+  .imgProductSmall {
+    height: 120px;
+    width: 80px;
+    margin: 7px;
+    padding: 5px
+  }
+
+/* bo loc san pham */
+  /* Fixed sidenav, full height */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a,
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* On mouse-over */
+  .sidenav a:hover,
+  .dropdown-btn:hover {
+    color: chocolate;
+  }
+
+  /* hien thi so luong sp trong giio hang */
+
+  .qty-header {
+    text-decoration: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-left: -0.75%;
+    background: #dc3545;
+    border-radius: 50%;
+    color: white;
+    line-height: 25px;
+    font-size: 14px;
+  }
+
+  .form-group span {
+    color: red;
+  }
+
+  /* hien thi light-box */
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 10000;
+  }
+
+  .light-box {
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    position: fixed;
+    background: white;
+    height: 150px;
+    text-align: center;
+    color: blue;
+    border: 2px solid pink;
+    border-radius: 10px;
+    z-index: 10001;
+    overflow-x: hidden;
+  }
+
+  .header-search {
+    margin-top: 20px;
+  }
+
+  /*  */
+  @media screen and (min-width: 578px) {
+     .img-size {
+      height: 280px;
+     }
+
+    }
+
+  @media screen and (min-width: 992px) {
+     .img-size {
+      height: 280px;
+     }
+      /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    @media screen and (min-width: 1100px) {
+     .img-size {
+      height: 320px;
+     }
+      /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    @media screen and (max-width: 774px){
+      .header-cart{
+        display: none;
+      }
+      .hotline{
+        display: none;
+      }
+
+     .cart-w-450 {
+       display: none;
+     }
+      
+    }
+
+    @media screen and (max-width: 767px){
+      
+      .header-logo{
+        margin:0px auto;
+        display: block;
+      }
+      .header-search {
+        margin-top: -30px!important;
+      }
+      .light-box {
+        left: 20%;
+      }
+    }
+
+    @media screen and (max-width: 444px){
+      
+      .light-box {
+        left: 15%;
+      }
+
+      .img-size {
+        height: 370px;
+      }
+
+      .tabcontent{
+        padding-top: 75px;
+      }
+
+      .display-prd {
+        display: none;
+      }
+    }
+
+    

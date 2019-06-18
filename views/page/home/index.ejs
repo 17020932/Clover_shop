@@ -1,0 +1,71 @@
+<% include ./../../element/header-1 %>
+
+<div class="justify-content-center">
+    <!-- container -->
+
+    <div class="row justify-content-center">
+
+        <!-- nav-bar-right -->
+        <% include ./../../element/nav-bar-right %>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9 mt-4">
+            <div class="box-name">
+                <h7>Danh mục sản phẩm <span>><%= currentStatus.split("-").join(" ")%></span></h7>
+            </div>
+            <div class="row">
+
+                <% items.forEach((item)=>{ %>
+                <div class="col-lg-3 col-md-3 col-sm-4 mb-4 product-card">
+                    <div class="card h-100">
+                        <a href="/danh-muc-san-pham/thong-tin-chi-tiet/<%= item.id %>"><img class="card-img-top img-size" src="<%= item.link_img[0] %>" alt=""></a>
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                <a href="/danh-muc-san-pham/thong-tin-chi-tiet/<%= item.id %> "><%= item.name %></a>
+                            </h6>
+                            <h6><%= item.price %>đ</h6>
+                            <!-- <p class="card-text"><%= item.desc %></p> -->
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+    <div class="m-3">
+        
+        <% include ./../../helper/pagination%>
+    
+        <%- paginationHelper(pagination, currentStatus, keyWord, from, to) %>
+     
+      </div>
+</div>
+<style>
+    .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+    }
+
+    .box-name {
+        border: 1px solid #6c757d;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .card-body {
+      flex: 0;
+      padding: 5px;
+  }
+</style>
